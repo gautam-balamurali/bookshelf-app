@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# 📚Bookshelf App📚
+
+- A bookshelf app that allows you to select and categorise books you have read, are currently reading, or want to read.
+
+## Tech Stack
+
+* React
+* Netlify
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
