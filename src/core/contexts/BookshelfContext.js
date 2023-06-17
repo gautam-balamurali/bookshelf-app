@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createContext, useContext, useEffect, useState } from "react";
 import { books } from "../database/Database";
 

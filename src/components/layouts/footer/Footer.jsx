@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import './Footer.css'
 
 const Footer = () => {

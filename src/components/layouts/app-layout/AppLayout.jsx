@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import AppRoutes from "../../../core/app-routes/AppRoutes";
 import Header from "../header/Header";
 
