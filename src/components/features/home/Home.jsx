@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { categories } from "../../../config/app-config";
 import { useBookshelf } from "../../../core/contexts/BookshelfContext";
 import "./Home.css";

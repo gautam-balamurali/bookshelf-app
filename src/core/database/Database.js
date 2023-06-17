@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const books = [
   {
     id: 1,
