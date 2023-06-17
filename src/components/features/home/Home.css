@@ -1,0 +1,36 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.category h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.1em;
+  align-self: flex-start;
+}
+
+.books-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  padding: 1rem;
+  max-width: 15rem;
+  gap: 0.5rem;
+}
+
+.book-image {
+  height: 13rem;
+  width: 13rem;
+}
