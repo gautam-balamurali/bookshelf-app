@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { books } from "../database/Database";
+import { filteredList } from "../utils/helper-functions/HelperFunctions";
 
 export const BookshelfContext = createContext();
 
@@ -11,6 +12,8 @@ export const BookshelfProvider = ({ children }) => {
     readBooks: null,
     wantToReadBooks: null,
     currentlyReadingBooks: null,
+    searchedBooks: [],
+    currentSearchValue: "",
   });
 
   useEffect(() => {
@@ -41,6 +44,9 @@ export const BookshelfProvider = ({ children }) => {
         (book) => book.category === "current"
       ),
       noneCategory: updatedBooksData.filter((book) => book.category === "none"),
+      searchedBooks: [
+        ...filteredList(updatedBooksData, bookshelf.currentSearchValue),
+      ],
     }));
   };
 
@@ -49,8 +55,20 @@ export const BookshelfProvider = ({ children }) => {
     moveBook(id, category);
   };
 
+  const handleSearchInput = (event) => {
+    const searchValue = event.target.value;
+    const updatedSearchedBooks = filteredList(bookshelf.booksData, searchValue);
+    setBookshelf((prev) => ({
+      ...prev,
+      searchedBooks: [...updatedSearchedBooks],
+      currentSearchValue: searchValue,
+    }));
+  };
+
   return (
-    <BookshelfContext.Provider value={{ ...bookshelf, handleShelfChange }}>
+    <BookshelfContext.Provider
+      value={{ ...bookshelf, handleShelfChange, handleSearchInput }}
+    >
       {children}
     </BookshelfContext.Provider>
   );
