@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { books } from "../database/Database";
 import { filteredList } from "../utils/helper-functions/HelperFunctions";
+import { toast } from "react-toastify";
 
 export const BookshelfContext = createContext();
 
@@ -48,6 +49,7 @@ export const BookshelfProvider = ({ children }) => {
         ...filteredList(updatedBooksData, bookshelf.currentSearchValue),
       ],
     }));
+    toast.success("Changed category successfully!");
   };
 
   const handleShelfChange = (id, event) => {
