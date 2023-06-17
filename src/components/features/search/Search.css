@@ -1,0 +1,33 @@
+.search-container {
+  padding: 3rem;
+}
+
+.search-bar {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--medium-shade-color);
+  outline: none;
+  height: 2rem;
+  padding: 1rem;
+}
+
+.go-back-btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1024px) {
+  .go-back-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+}

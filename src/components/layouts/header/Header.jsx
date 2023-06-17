@@ -9,11 +9,11 @@ const Header = () => {
     <nav className="navigation">
       <NavLink className={"link"} to="/">
         {" "}
-        Home{" "}
+        🏠 Home{" "}
       </NavLink>{" "}
       <NavLink className={"link"} to="/search-books">
         {" "}
-        Search Books{" "}
+        🔎 Search Books{" "}
       </NavLink>
     </nav>
   );
